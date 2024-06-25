@@ -9,6 +9,10 @@ const keypair = getKeypairFromEnvironment("SECRET_KEY");
 
 const publicKey = keypair.publicKey;
 
+const address = publicKey.toBase58()
+
+console.log(`addrss is ${address}`)
+
 const connection = new Connection("https://api.devnet.solana.com", "confirmed");
 
 function validateSolAddress(address: string): string | null {

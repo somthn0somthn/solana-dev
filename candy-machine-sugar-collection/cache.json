@@ -1,0 +1,50 @@
+{
+  "program": {
+    "candyMachine": "Acto6xpkBNvL9SPrkDSresZuV13ECTTp7weN1mZU6YXw",
+    "candyGuard": "",
+    "candyMachineCreator": "NkE65gbP9zXnuL7dtQpdqdV6vaqUXayfwXbaiRy1Q9D",
+    "collectionMint": "85bZW8G8JGHUNVv1Tz2o8gEU4oMfK2E8tyg4v6S61xW"
+  },
+  "items": {
+    "-1": {
+      "name": "Trippy Hat Collection",
+      "image_hash": "e9f289df755d06347ca650a9582cfc06b3dc7684391da6adde44d5bb1ed00ef0",
+      "image_link": "https://raw.githubusercontent.com/somthn0somthn/solana-dev/main/candy-machine-sugar-collection/assets/collection.png",
+      "metadata_hash": "ceb7295fe726bdecea4e572d329564de5f472b05d0e5fdd9d3bc294e030e7c95",
+      "metadata_link": "https://arweave.net/Je3N1fL4PkyAKKk-La91MVrjYL9vYSEcF_eFZztdqNE",
+      "onChain": true
+    },
+    "0": {
+      "name": "Trippy Hat #0",
+      "image_hash": "0c43d8b2237a928091618df792afd5dc72f5342153a237ac2fdc7db148ddbee6",
+      "image_link": "https://raw.githubusercontent.com/somthn0somthn/solana-dev/main/candy-machine-sugar-collection/assets/0.png",
+      "metadata_hash": "312755cb0b28b9c156ea3d4414095581786ed811b36f510c725c42ee60cd5525",
+      "metadata_link": "https://arweave.net/I_lE-oTLxeg3vNVZP-BfRkSHc6dtnTSZudiPx6ykA8E",
+      "onChain": true
+    },
+    "1": {
+      "name": "Trippy Hat #1",
+      "image_hash": "f9822f62eff700303453159b9246d9151bb471a2691adc68510e3f08e9402aeb",
+      "image_link": "https://raw.githubusercontent.com/somthn0somthn/solana-dev/main/candy-machine-sugar-collection/assets/1.png",
+      "metadata_hash": "01e88309ee8ba9e20d99ad3806cc92f0c0b928dbd0dbff7254f215c8debbe375",
+      "metadata_link": "https://arweave.net/Bj25XZu6K3wADBTwq50q9Mm7nHZOLZkZS_r7IWwOvnw",
+      "onChain": true
+    },
+    "2": {
+      "name": "Trippy Hat #2",
+      "image_hash": "bfd8a095c578cf6b7b00d0beaa6356906e52cdeec6de0d693506d07593d3563e",
+      "image_link": "https://raw.githubusercontent.com/somthn0somthn/solana-dev/main/candy-machine-sugar-collection/assets/2.png",
+      "metadata_hash": "3f71cca79d6fb11afd0ff55fef0a2b73e8914352071b71ff5a43e1c59fc97ea0",
+      "metadata_link": "https://arweave.net/jYWW1n6-vxQhx58IPOQhtIjA09n68WIXr01NRdoHlVM",
+      "onChain": true
+    },
+    "3": {
+      "name": "Trippy Hat #3",
+      "image_hash": "13699216a655afaa34aee237ebb32396598a8bef18df1a1b9c315ace5068d1eb",
+      "image_link": "https://raw.githubusercontent.com/somthn0somthn/solana-dev/main/candy-machine-sugar-collection/assets/3.png",
+      "metadata_hash": "6cf2728e931df260b4b889322b81ce3a4b63bee1bf75c4f78328d0648c7ab0ed",
+      "metadata_link": "https://arweave.net/5wEqXUPSqMak8VvClX8UETvBnvftGzEY9anNIkcMCPs",
+      "onChain": true
+    }
+  }
+}

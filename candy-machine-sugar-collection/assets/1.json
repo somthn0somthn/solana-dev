@@ -1,0 +1,36 @@
+{
+  "name": "Trippy Hat #1",
+  "symbol": "TRPH",
+  "description": "A trippy, psychedelic hat with vibrant colors and surreal patterns.",
+  "seller_fee_basis_points": 500,
+  "image": "https://raw.githubusercontent.com/somthn0somthn/solana-dev/main/candy-machine-sugar-collection/assets/1.png",
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Psychedelic"
+    },
+    {
+      "trait_type": "Colors",
+      "value": "Vibrant"
+    },
+    {
+      "trait_type": "Pattern",
+      "value": "Surreal"
+    }
+  ],
+  "properties": {
+    "creators": [
+      {
+        "address": "HzThhJAw99274RoKNfdhnskCdh4wAMFG2X4yBt2KDkgg",
+        "share": 100
+      }
+    ],
+    "files": [
+      {
+        "uri": "https://raw.githubusercontent.com/somthn0somthn/solana-dev/main/candy-machine-sugar-collection/assets/1.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}
+

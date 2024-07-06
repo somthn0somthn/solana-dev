@@ -30,7 +30,7 @@ console.log(
 
 const transaction = new Transaction();
 
-const LAMPORTS_TO_SEND = 5000000;
+const LAMPORTS_TO_SEND = 1000000000;
 
 const sendSolInstruction = SystemProgram.transfer({
     fromPubkey: senderKeypair.publicKey,

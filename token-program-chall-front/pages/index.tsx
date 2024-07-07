@@ -2,7 +2,12 @@ import { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import { AppBar } from '../components/AppBar'
 import Head from 'next/head'
-import { PingButton } from '../components/PingButton'
+import { WalletContextProvider } from '../components/WalletContextProvider'
+import { WalletDisplay } from '../components/WalletDisplay'
+import { CreateMintButton } from '../components/CreateMintButton'
+import { TokenAccountForm } from '../components/TokenAccountForm'
+import { RecipientForm } from '../components/RecipientForm'
+
 
 const Home: NextPage = (props) => {
 
@@ -12,13 +17,18 @@ const Home: NextPage = (props) => {
         <title>Wallet-Adapter Example</title>
         <meta
           name="description"
-          content="Wallet-Adapter Example"
+          content="Token Program Example"
         />
       </Head>
+      <WalletContextProvider>
         <AppBar />
         <div className={styles.AppBody}>
-          <PingButton/>
+          <WalletDisplay />
+          <CreateMintButton />
+          <TokenAccountForm />
+          <RecipientForm />
         </div>
+      </WalletContextProvider>
     </div>
   );
 }

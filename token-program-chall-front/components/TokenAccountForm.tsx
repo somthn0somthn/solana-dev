@@ -7,7 +7,7 @@ import { TokenAccountButton } from '../components/TokenAccountButton';
 export const TokenAccountForm: FC = () => {
     
     return (
-        <div className={styles.form}>
+        <div className={styles.formContainer}>
             <MintInputAbove />
             <AccountOwnerInput  />
             <TokenAccountButton />

@@ -10,7 +10,7 @@ export const MintInputBelow: FC = () => {
     };
 
     return (
-        <div className={styles.form}>
+        <div className={styles.formField}>
             <label className={styles.formField}>
                 Token Mint
                 <input

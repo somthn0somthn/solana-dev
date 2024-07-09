@@ -7,15 +7,10 @@ import { WalletDisplay } from '../components/WalletDisplay'
 import { CreateMintButton } from '../components/CreateMintButton'
 import { TokenAccountForm } from '../components/TokenAccountForm'
 import { RecipientForm } from '../components/RecipientForm'
-import { useState } from 'react';
 import { FormProvider } from '../components/FormContext'
 
 
 const Home: NextPage = (props) => {
-  const [mintValue, setMintValue] = useState<string>('');
-  const [accountOwnerValue, setAccountOwnerValue] = useState<string>('');
-  const [recipientValue, setRecipientValue] = useState<string>('');
-  const [tokenAmount, setTokenAmount] = useState<number>(0);
 
   return (
     <div className={styles.App}>
@@ -30,7 +25,6 @@ const Home: NextPage = (props) => {
         <AppBar />
         <div className={styles.AppBody}>
 
-          {/* TODO :: CLEAN UP */}
           <FormProvider>
             <WalletDisplay />
             <CreateMintButton />

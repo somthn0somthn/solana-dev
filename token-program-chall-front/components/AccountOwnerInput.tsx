@@ -1,23 +1,21 @@
 import { ChangeEvent, FC, useState } from 'react'
 import styles from '../styles/Home.module.css'
+import { useFormContext } from './FormContext';
 
-interface AccountOwnerInputProps {
-    value: string;
-    setValue: (value: string) => void;
-}
-
-export const AccountOwnerInput: FC<AccountOwnerInputProps> = ({ value, setValue }) => {
+export const AccountOwnerInput: FC = () => {
+    const { associatedAccountOwner, setAssociatedAccountOwner} = useFormContext();
+    
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setValue(event.target.value)
+        setAssociatedAccountOwner(event.target.value)
     }
     
 	return (
 		<div className={styles.form}>
             <label className={styles.formField}>
-                Token Account Owner - wire me!
+                Token Account Owner
                 <input 
                     type="text"
-                    value={value}
+                    value={associatedAccountOwner}
                     onChange={handleChange}
                     placeholder="Enter Token Account Owner PublicKey"
                     className={styles.input}

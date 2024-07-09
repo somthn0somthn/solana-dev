@@ -1,23 +1,21 @@
 import { ChangeEvent, FC, useState } from 'react'
 import styles from '../styles/Home.module.css'
+import { useFormContext } from './FormContext';
 
-interface RecipientInputProps {
-    value: string;
-    setValue: (value: string) => void;
-}
+export const RecipientInput: FC = () => {
+    const { recipient, setRecipient } = useFormContext();
 
-export const RecipientInput: FC<RecipientInputProps> = ({ value, setValue }) => {
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setValue(event.target.value)
+        setRecipient(event.target.value)
     }
     
 	return (
 		<div className={styles.form}>
             <label className={styles.formField}>
-                Recipient - wire me!
+                Recipient
                 <input 
                     type="text"
-                    value={value}
+                    value={recipient}
                     onChange={handleChange}
                     placeholder="Enter Recipient PubKey"
                     className={styles.input}

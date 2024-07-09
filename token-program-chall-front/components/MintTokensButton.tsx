@@ -1,15 +1,15 @@
 import { FC, useState } from 'react'
 import styles from '../styles/PingButton.module.css'
+import { useWallet, useConnection } from '@solana/wallet-adapter-react'
+import * as spl from '@solana/spl-token'
+import { PublicKey, Transaction } from '@solana/web3.js'
+import { useFormContext } from './FormContext';
 
-interface TokenAccountButtonProps {
-    mintValue: string;
-    recipientValue: string;
-    amountValue: number;
-}
-
-export const MintTokensButton: FC<TokenAccountButtonProps> = ( { mintValue, recipientValue, amountValue }) => {
+export const MintTokensButton: FC = () => {
+    const { tokenMint, associatedAccountOwner, recipient, tokenAmount } = useFormContext();
+    
     const handleClick = () => {
-        console.log(`Token Mint: ${mintValue}, Recipient: ${recipientValue}, Token Amount: ${amountValue}`)
+        console.log(`TokenMint: ${tokenMint} \n AssociatedAccount: ${associatedAccountOwner} \n recipient: ${recipient} \n tokenAmount: ${tokenAmount}`);
     }
 
 	return (

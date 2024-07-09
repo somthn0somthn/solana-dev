@@ -1,25 +1,24 @@
 import { ChangeEvent, FC, useState } from 'react'
 import styles from '../styles/Home.module.css'
+import { useFormContext } from './FormContext';
 
-interface AmountInputProps {
-    value: number;
-    setValue: (value: number) => void;
-}
 
-export const AmountInput: FC<AmountInputProps> = ({ value, setValue }) => {
+export const AmountInput: FC = () => {
+    const { tokenAmount, setTokenAmount } = useFormContext();
+
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         const inputValue = event.target.value;
         const numericValue = inputValue === '' ? 0 : parseInt(inputValue, 10);
-        setValue(numericValue)
+        setTokenAmount(numericValue);
     }
     
 	return (
 		<div className={styles.form}>
             <label className={styles.formField}>
-                Amount Tokens to Mint - wire me!
+                Amount Tokens to Mint
                 <input 
                     type="number"
-                    value={value}
+                    value={tokenAmount}
                     onChange={handleChange}
                     placeholder="Enter Recipient PubKey"
                     className={styles.input}

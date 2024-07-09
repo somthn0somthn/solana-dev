@@ -8,7 +8,7 @@ export const CreateMintButton: FC = () => {
 	const { publicKey, sendTransaction } = useWallet();
 	const { connection } = useConnection();
 
-    const onClick = async () => {
+    const handleClick = async () => {
 		if (!publicKey || !connection) {
 			alert("Your wallet isn't connected -  so cant create mint");
 			return
@@ -54,7 +54,7 @@ export const CreateMintButton: FC = () => {
     }
     
 	return (
-		<div className={styles.buttonContainer} onClick={onClick}>
+		<div className={styles.buttonContainer} onClick={handleClick}>
 			<button className={styles.button}>Create Mint</button>
 		</div>
 	)

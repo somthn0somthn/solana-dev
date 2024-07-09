@@ -29,6 +29,8 @@ const Home: NextPage = (props) => {
       <WalletContextProvider>
         <AppBar />
         <div className={styles.AppBody}>
+
+          {/* TODO :: CLEAN UP */}
           <FormProvider>
             <WalletDisplay />
             <CreateMintButton />

@@ -40,12 +40,6 @@ pub struct Initialize<'info> {
     pub system_program: Program<'info, System>,
 }
 
-#[derive(Accounts)]
-pub struct CheckLamports<'info> {
-    #[account(mut)]
-    pub user: Signer<'info>,
-}
-
 //purposefully making this less generic for fun
 #[derive(Accounts)]
 pub struct Increment<'info> {
@@ -64,11 +58,4 @@ pub struct Decrement<'info> {
 #[account]
 pub struct Counter {
     pub count: u64
-}
-
-#[event]
-pub struct MyEvent {
-    pub data: u64,
-    #[index]
-    pub label: String,
 }

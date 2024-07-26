@@ -12,7 +12,7 @@ anchor_student_intro = "Aq5DdP8DnpVF6wpvd3uQZzzCBzcT5MG8gLEFkwhAXYfW"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Devnet"
+cluster = "Localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]

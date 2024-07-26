@@ -1,10 +1,12 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
 import { expect } from "chai";
+import { getAssociatedTokenAddress, getAccount } from "@solana/spl-token"
 import { AnchorMovieRev } from "../target/types/anchor_movie_rev";
+import idl from "../target/idl/anchor_movie_rev.json";
+
 
 describe("anchor-movie-rev", () => {
-  // Configure the client to use the local cluster.
   const provider = anchor.AnchorProvider.env()
   anchor.setProvider(provider);
 
@@ -21,9 +23,26 @@ describe("anchor-movie-rev", () => {
     program.programId
   )
 
-  it("Movie rev added", async () => {
+  const [mint] = anchor.web3.PublicKey.findProgramAddressSync(
+    [Buffer.from("mint")],
+    program.programId
+  )
+
+  it("Initializes the reward token", async () => {
+    const tx = await program.methods.initializeTokenMint().rpc()
+  });
+
+  it("Movie rev added with token mint", async () => {
+    const tokenAccount = await getAssociatedTokenAddress(
+      mint,
+      provider.wallet.publicKey
+    )
+
     const tx = await program.methods
       .addMovieReview(movie.title, movie.description, movie.rating)
+      .accounts({
+        tokenAccount: tokenAccount,
+      })
       .rpc()
 
     const account = await program.account.movieAccountState.fetch(moviePda)

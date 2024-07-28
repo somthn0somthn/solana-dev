@@ -11,6 +11,7 @@ export const Form: FC = () => {
     const [title, setTitle] = useState('')
     const [rating, setRating] = useState(0)
     const [description, setDescription] = useState('')
+    const [message, setMessage] = useState('')
 
     const { connection } = useConnection();
     const { publicKey, sendTransaction } = useWallet();
@@ -31,19 +32,19 @@ export const Form: FC = () => {
         const transaction = new web3.Transaction()
 
         const [pda] = await web3.PublicKey.findProgramAddress(
-            [publicKey.toBuffer(), Buffer.from(movie.title)],// new TextEncoder().encode(movie.title)],
+            [publicKey.toBuffer(), Buffer.from(movie.title)],
             new web3.PublicKey(MOVIE_REVIEW_PROGRAM_ID)
         )
 
         const instruction = new web3.TransactionInstruction({
             keys: [
                 {
-                    pubkey: publicKey,
+                    pubkey: publicKey, 
                     isSigner: true,
                     isWritable: false,
                 },
                 {
-                    pubkey: pda,
+                    pubkey: pda, 
                     isSigner: false,
                     isWritable: true
                 },
@@ -52,6 +53,7 @@ export const Form: FC = () => {
                     isSigner: false,
                     isWritable: false
                 }
+
             ],
             data: buffer,
             programId: new web3.PublicKey(MOVIE_REVIEW_PROGRAM_ID)
@@ -61,10 +63,8 @@ export const Form: FC = () => {
 
         try {
             let txid = await sendTransaction(transaction, connection)
-            alert(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
             console.log(`Transaction submitted: https://explorer.solana.com/tx/${txid}?cluster=devnet`)
         } catch (e) {
-            console.log(JSON.stringify(e))
             alert(JSON.stringify(e))
         }
     }
@@ -122,3 +122,5 @@ export const Form: FC = () => {
         </Box>
     );
 }
+
+//use the same starter code and adapt it to student introductions
